@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
     $('#currentDay').html(moment().format('dddd, MMMM Do YYYY'));
 
@@ -6,30 +5,31 @@ $(document).ready(function () {
 
     var time = moment();
     var hour = moment().hours();
-   
+
     function plannerActions() {
-        $('.time-section').each(function () {
+        $('.time-block').each(function () {
             var id = $(this).attr('id');
             var userInput = localStorage.getItem(id);
 
             if (userInput != null) {
-                $(this).find('.info').val(userInput);
+                $(this).find('.description').val(userInput);
 
             }  
         });
     }
 
+
     plannerActions();
-    var savePress = $('.savePress');
-    savePress.on('click', function () {
+    var saveBtn = $('.saveBtn');
+    saveBtn.on('click', function () {
         var id = $(this).parent().attr('id');
-        var userInput = $(this).siblings('.info').val();
+        var userInput = $(this).siblings('.description').val();
         localStorage.setItem(id, userInput);
     });
-   
+
     function timeColor() {
         hour = time.hour();
-        $('.time-section').each(function () {
+        $('.time-block').each(function () {
             var targetHour = parseInt($(this).attr('id'));
 
             if (targetHour < hour) {

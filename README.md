@@ -1,6 +1,6 @@
 # planner
 
-![site](./assets/images/IMG1.jpeg);
+![site](./assets/images/IMG3.jpeg);
 
 ## Techonlogies Used
 During this project. I used the following techonlogies 
