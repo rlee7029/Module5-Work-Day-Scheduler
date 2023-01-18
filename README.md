@@ -17,4 +17,4 @@ During this project. I used the following techonlogies
 N/A
 
 ## Deployed link
-https://rlee7029.github.io/planner/
+https://rlee7029.github.io/Module5-Work-Day-Scheduler/
